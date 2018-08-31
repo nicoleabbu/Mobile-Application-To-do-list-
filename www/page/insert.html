@@ -1,0 +1,22 @@
+<ion-view>
+	<h1>Add Product</h1>
+  <div ng-controller="homeCtrl">
+
+    <div class="bar bar-header bar-light">
+  <h1 class="title">bar-light</h1>
+</div>
+
+
+    	<form data-ng-submit="add()" class="todo-form">
+           <label>Product Code:</label><input type="text" data-ng-model="ProductCode" required="" />
+      	   <label>Product Name:</label><input type="text" data-ng-model="ProductName" required="" />
+           <label>Price:</label><input type="text" data-ng-model="Price" required="" />
+            <label>Quatity:</label><input type="text" data-ng-model="Quantity" required="" />
+  
+        <br />
+        <input type="submit" value="Add Product" />
+      </form>
+   
+    	 
+  </div>
+</ion-view>

@@ -1,0 +1,89 @@
+<ion-view>
+  <ion-content>
+  <h1>Add Product</h1>
+  <div ng-controller="TodoController">
+      <div class="bar bar-header bar-calm">
+        <h1 class="title">{{ appTitle }}</h1>
+      </div>
+
+      <section class="app-body">
+          <section class="archive-control">
+            <span>{{ remaining() }} of {{ todos.length }} remaining</span>
+            <p>[ <a href="" data-ng-click="archive()">Remove Completed Items</a> ]</p>
+      </section>
+ 
+
+
+ <form data-ng-submit="addTodo()" class="todo-form">
+      <div class="list">
+           <label class="item item-input item-stacked-label">
+             <span class="input-label">Your Schedule</span>
+            <input type="text" data-ng-model="todoText" placeholder="Type Here...">
+            <button class="button button-calm">
+              Create
+            </button>
+      </label> 
+     </div>
+  </form>
+
+      <ul class="list">
+
+          <li class="item" data-ng-repeat="todo in todos track by $index">
+          <input type="checkbox" data-ng-model="todo.done">
+          <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+        </li>
+  
+      </ul>
+
+  
+
+
+</div>
+</ion-content>
+</ion-view>
+<!-- 
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple MyList app in Angularjs that saves to localstorage</title>
+  
+  
+  
+    
+  
+</head>
+
+<body>
+  <body data-ng-app="">
+  <div class="container" data-ng-controller="TodoController">
+    <header class="app-header">
+      <h1 class="app-title">{{ appTitle }}</h1>
+      <h1 class="app-headline">{{ appHeadline }}</h1>
+    </header>
+
+    <section class="app-body">
+      <section class="archive-control">
+        <span>{{ remaining() }} of {{ todos.length }} remaining</span>
+        <p>[ <a href="" data-ng-click="archive()">Remove Completed Items</a> ]</p>
+      </section>
+
+      <ul class="unstyled">
+        <li data-ng-repeat="todo in todos track by $index">
+          <input type="checkbox" data-ng-model="todo.done">
+          <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+        </li>
+      </ul>
+
+      <form data-ng-submit="addTodo()" class="todo-form">
+        <input type="text" data-ng-model="todoText" required="" placeholder="Enter new ToDo item" />
+        <br />
+        <input type="submit" value="Add Task" />
+      </form>
+    </section>
+  </div>
+ 
+
+</body>
+</html>
+ -->
